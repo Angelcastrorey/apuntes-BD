@@ -89,4 +89,24 @@ DROP table [if exists] <nombre_tabla>
 DROP DATABASE [IF EXISTS] <nombre_base_de_datos>
 ```
 
+# Modificar un objeto:ALTER
+Es la sentencia utilizada para modificar tablas usuarios ,vista, procedimientos de una base de datos
+- La sintaxis para modificar la tabla es:
+```sql
+ALTER TABLE <nombre_tabla>
+  [ADD <Definicion_columna> ]
+  [CHANGE <nombre_columna> <definicion_columna>]
+  [DROP COLUMN <nombre_columna>]
+  [ADD CONSTRAINT <restriccion>]
+```
+# Conceder privilegios sobre un objeto:GRANT
+Permite conceder privilegios sobre un objeto a un usuario de la base de datos
+
+```sql
+GRANT <privilegio>
+ON <objeto>
+TO <usuario>
+[WITH GRANT OPTIONS]
+```
+
 
