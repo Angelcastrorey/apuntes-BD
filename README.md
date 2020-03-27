@@ -27,13 +27,20 @@ Es un lenguaje declarativo que se utiliza en programación para administrar y re
 
 ## Lenguaje de definicion de datos
 ***CREATE***
--Crea objetos de la base de datos como tablas,vistas e índices
+- Crea objetos de la base de datos como tablas,vistas e índices
 
 ***ALTER***
--Altera la estructura de una tabla
+- Altera la estructura de una tabla
 
 ***DROP***
--Elimina objetos de la base de datos
+- Elimina objetos de la base de datos
+
+# Reglas de Nomenclatura
+Los nombres de tablas y columnas:
+Deben empezar por una letra
+Deben tener entre 1 y 30 caracteres
+No deben duplicar el nombre de otro objeto del mismo usuario
+
 
 # Estructura de DDL con create
 DDL utiliza ciertos predicados para realizar distintas funciones ,con create se utilizan los siguientes:
@@ -46,6 +53,40 @@ IF NOT EXITS:Se emplea para determinar si hay o no datos en una lista de valores
 
 SCHEMA:Mismo uso que 'DATABASE' pero menos rectrictivo
 
-CHARACTER SET:
+CHARACTER SET:Sirve para añadir carácteres a la tabla
 
 USER:Sirve para crear usuarios en la base
+
+DEFAULT:vuelve todo al valor por defecto
+
+# Crear un objeto:CREATE
+Es la sentencia utilizada para la creación de un objeto(base de datos,tabla,vista,usuario,procedimiendo)en una base de datos
+
+- La sintaxis para la creación de una tabla es la siguiente
+
+``` sql
+create table [if not exists] <nombre_tabla>
+(
+  <nombre_columna1> <tipo_dato> <restricciones>
+  <nombre_columna2> <tipo_dato> <restricciones>
+  .............................
+)
+```
+
+- Para crear una base de datos 
+```sql
+CREATE DATABASE [IF NOT EXISTS] <nombre_base_de_datos>
+```
+
+# Eliminar un objeto :DROP
+- Es la sentencia utilizada para eliminar objetos(tabla,usuario,vista,procedimiento)en la base de datos
+- La sentencia para eliminar una tabla
+```sql
+DROP table [if exists] <nombre_tabla>
+```
+- Para eliminar una base de datos
+```sql
+DROP DATABASE [IF EXISTS] <nombre_base_de_datos>
+```
+
+
