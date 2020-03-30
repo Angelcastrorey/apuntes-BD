@@ -132,7 +132,7 @@ Existe la posibilidad de añadir comentarios al código del lenguaje SQL según 
 # Tipos de datos
 Cadenas de caracteres
 
-Tipo CHAR,VARCHAR
+***Tipo CHAR,VARCHAR***
 
 Este tipo de datos permite almacenar cadenas de texto fijas(CHAR) o variables (VARCHAR)
 
@@ -148,3 +148,49 @@ El tipo text permite almacenar cadenas de caracteres de hasta varios GB de longi
 - Solo se puede definir una columna TEXT por tabla
 - No se pueden establecer restricciones en columnas de este tipo
 - No se pueden utilizar en todas las cláusulas
+
+***TIPOS NUMÉRICOS***
+
+Los tipo más utilizados son BIT,INT,BIGINT,FLOAT,REAL,para la representación de números enteros de menor o mayor tamaño y para números en coma flotante de mayor o menos precisión,también podremos ampliar el rango de un número positivo añadiendo UNSIGNED tras definirlo
+
+```sql
+id INT UNSIGNED
+```
+
+***TIPOS DE FECHAS***
+
+Los tipos más utilizados para almacenar valores de fechas es 'DATE' o para fechas con hora 'DATETIME'.Por defecto el formato más utilizado es DD/MM/YY
+
+También se puede usar el tipo TIMESTAMP para almacenar una marca de tiempo (fecha y hora).Además permite el uso de la constante CURRENT_TIMESTAMP en la definición de la columna al definirle un valor por defecto al crear esa tabla
+
+***TIPO BOOLEANO***
+
+Permite almacenar valores lógicos verdadero o falso o si o no.Realmente se definde la como del tipo TINYINT,que simplemeente almacena los valores 0 y 1 para indicar los valores lógicos verdadero y falso, también podremos usar los valores true o false o asignar 0 o 1
+
+
+***RESTRICCIONES***
+
+  Las restricciones se pueden establecer o no ,a las columnas de cada tabla para forzar a que los datos almacenados en ellas cumplan ciertas condiciones para que la información sea la correcta.Por ejemplo ,podemos obligar a un campo donde tenemos el DNI para que tenga una longitud mínima 
+  
+  Hay que tener en cuenta que por lo general estas restricciones se definen en la línea con la definición del campo pero de forma opcional también pueden ser definidas por separado justo debajo de la definición de todos los campos de la tabla
+  
+  ***CLAVE PRIMARIA***
+  
+  Una clave primaria dentro de una tabla es la columna o conjunto de columnas cuyo valor identifica a cada fila.Debe ser única ,no nula y es obligatoria.Como máximo podremos definir una clave primaria por tabla y es recomendable
+  
+  # PRIMARY KEY
+  
+  ``` SQL
+  DNI VARCHAR(9) PRIMARY KEY
+  ```
+  
+  Y si lo hacemos al final de la definición de las columnas ,quedaría asi:
+  ``` SQL
+  PRIMARY KEY (DNI)
+  ```
+  
+  Hay que tener en cuenta que a la hora de definir claves primarias compuestas de campos o más ,pues está deberá ser definida forzosamente tras la definición de los campos involucrados:
+  ``` sql
+  PRIMARY KEY (NOMBRE, APELLIDOS)
+  
+ # AUTONUMÉRICO
