@@ -109,4 +109,42 @@ TO <usuario>
 [WITH GRANT OPTIONS]
 ```
 
+# Revocar privilegios sobre un objeto:revoke
+Permite eliminar un privilegio sobre un objeto a un usuario
 
+``` sql
+REVOKE <privilegio>
+ON <objeto>
+from <usuario>
+```
+# Conectar con una base de datos
+Permite realizar la conexión con una base de datos de MySQL
+
+```sql
+USE <nombre_base_de_datos>
+```
+# Comentarios en SQL
+Existe la posibilidad de añadir comentarios al código del lenguaje SQL según la siguiente sintaxis:
+``` sql
+--Esto es un comentario y MySQL no lo ejecuta
+/* Esto también es un comentario y tampoco se ejecuta */
+```
+# Tipos de datos
+Cadenas de caracteres
+
+Tipo CHAR,VARCHAR
+
+Este tipo de datos permite almacenar cadenas de texto fijas(CHAR) o variables (VARCHAR)
+
+El tipo de CHAR permite almacenar cadenas de caracteres de longitud fija entre 1 y 255 caracteres.La longitud de la cadena se debe especificar entre paréntesis en el momento de la declaración (cadena CHAR(25)).
+
+Por otro lado VARCHAR permite almacenar cadenas de caracteres variables hasta 4000 mil caracteres.La declaración de tipo VARCHAR es similar a la de CHAR (cadena VARCHAR(25)).La principal y única diferencia entre estos dos tipos es que el tipo CHAR declara una cadena fija de la longitud especifica mientras que en la declaración de un tipo VARCHAR lo que se especifica es un tamaño máximo,la cadena sólo ocupará el tamaño necesario para almacenar el dato que se contenga(hasta llegar al máximo),la cadena sólo ocupará el tamaño necesario para almacenar el dato que contenga (hasta llegar al máximo). En cualquier caso, no es posible almacenar cadenas de mayor tamaño al especificado en su declaración, puesto que el SGBD truncará el valor almacenándose sólo hasta la longitud establecida.
+
+
+***TIPO TEXT***
+
+El tipo text permite almacenar cadenas de caracteres de hasta varios GB de longitud y solo se recomienda su uso para textos grandes ya que tiene varias restricciones:
+
+- Solo se puede definir una columna TEXT por tabla
+- No se pueden establecer restricciones en columnas de este tipo
+- No se pueden utilizar en todas las cláusulas
