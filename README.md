@@ -296,3 +296,15 @@ email VARCHAR(100) UNIQUE
 
 # ÍNDICES
 
+Se utilizan para obetener datos de las tablas de forma rápida asociando el valor de una columna sobre la que definimos el índice con su posición en la tabla
+
+```sql
+INDEX autor_index (autor)
+```
+
+# USUARIOS Y PRIVILEGIOS
+
+```SQL
+CREATE USER 'DESARROLLADOR' IDENTIDIED BY 'MICONTRASEÑA';
+GRANT ALL PRIVILEGES ON biblioteca.* TO DESARROLLADOR;
+```
