@@ -1,4 +1,5 @@
 # apuntes-BD = FCT
+- Estos apuntes se basarán en DML Y DDL que hemos visto en clase
 1 Sublenguajes de SQL
 - DDL
 - DML
