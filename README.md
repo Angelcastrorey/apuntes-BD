@@ -194,3 +194,48 @@ Permite almacenar valores lógicos verdadero o falso o si o no.Realmente se defi
   PRIMARY KEY (NOMBRE, APELLIDOS)
   
  # AUTONUMÉRICO
+
+Es especialmente útil en el caso de que las columnas se definan como claves primarias de cada tabla,resulta añadir la restriccion de campo autonumérico,siempre y cuando la columna este de tipo entero haciendo que el gestor de base de datos asigne valores automaticos siempre siendo un valor entero de forma secuencial a medida que se insetar filas en dicha tabla,para definirlo usaremos:
+
+```sql
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT
+```
+
+# CLAVE AJENA
+
+La clave ajena está formada por una o varias columnas que hacen referncia a una clave primaria de otra o de la misma tabla y se pueden definir sin límite.El valor de la columna o columnas que son clave ajena será 'null' o el valor de la clave primaria de la tabla a la que hacen referencia, por ello para definir una clave ajena tenemos que indicar la cláusula referencial con 'REFERENCES' a la tabla que hace referencia.
+
+Para que una clave ajena haga referencia a un campo definido como clave primaria, la columna de la segunda tabla no podrá ser eliminada hasta que no lo haga la columna que le hace referencia.Para evitar eso añadiremos la restricción de clave ajena añadiendo la cláusula on delete o bien on update para el caso de un actualización y indicaremos la operación:
+
+- RESTRICT:Se rechaza la operación de eliminación/actualización
+
+- CASCADE:Realiza la operación y se elimina eb cascada en las filas que hace referencia
+- SET NULL:Realiza la operación y fija a NULL el valor al que hace referencia
+- NO ACTION:Se rechaza la operación de eliminación/actualización como ocurre con RESTRICT
+
+# EJEMPLOS
+
+```SQL
+CURSO VARCHAR(25) REFERENCES CURSOS
+CURSO VARCHAR(25) REFERENCES CURSOS ON DELTE CASCADE
+```
+
+```SQL
+FOREIGN KEY (CURSO) REFERENCES CURSOS
+FOREIGN KEY (CURSO) REFERENCES CURSOS ON DELETE CASCADE
+```
+
+# CLAVES AJENAS COMPUESTAS
+
+```SQL
+FOREIGN KEY (CURSO,AULA) REFERENCES CURSOS
+FOREIGN KEY (CURSO,AULA) REFERENCES CURSOS ON DELETE CASCADE
+```
+
+# DEFINIR CLAVES AJENAS
+
+- Hay que tener en cuenta varias condiciones:
+
+- La columna deberá ser del mismo tipo y atributos que la columna de la que es clave ajena
+- La columna deberá ser un índice
+- Si la columna es obligatoria(NOT NULL) no podrá contener 'SET NULL' para on delete y on update
