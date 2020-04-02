@@ -239,3 +239,60 @@ FOREIGN KEY (CURSO,AULA) REFERENCES CURSOS ON DELETE CASCADE
 - La columna deberá ser del mismo tipo y atributos que la columna de la que es clave ajena
 - La columna deberá ser un índice
 - Si la columna es obligatoria(NOT NULL) no podrá contener 'SET NULL' para on delete y on update
+
+# Ejemplo
+
+```SQL
+id_cliente INT UNSIGNED,
+INDEX (id_cliente),
+FOREIGN KEY(id_cliente) references clientes (id) on delete set null on update set null
+```
+
+```sql
+create table clientes (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+);
+```
+
+# CAMPOS OBLIGATORIOS
+
+Está restricción obliga a que se tenga que dar un valor obligatoriamente a una columna  y no podrán tener el valor 'NULL' utilizando la palabra 'NOT NULL'
+
+```SQL
+APELLIDOS VARCHAR(250) NOT NULL
+```
+
+# VALORES POR DEFECTO
+
+Se define el valor que tendrá una columna por defecto si no se especificas el valor y se utiliza 'DEFAULT'
+
+```sql
+fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+nombre VARCHAR(250) DEFAULT 'SIN NOMBRE'
+```
+
+# CONDICIONES
+
+```SQL
+NOMBRE VARCHAR(250) CHECK (NOMBRE = UPPER(NOMBRE))
+EDAD INT CHECK (EDAD > 0)
+CURSO INT CHECK (CURSO BETWEEN 1 AND 2)
+```
+
+Podemos definir las condiciones también:
+
+```sql
+curso ENUM ('0','2','3'),
+horario ENUM ('HOY','MAÑANA','NOCHE')
+```
+
+# VALORES ÚNICOS
+
+La restricción 'UNIQUE' evits los valores duplicados de una columna y a diferencia que PRIMARY KEY , unique se puede aplicar a varias columnas de la misma tabla y admite el valor NULL , si una columna lleva UNIQUE solo 1 de sus filas podrán llevar NULL
+
+```sql
+email VARCHAR(100) UNIQUE
+```
+
+# ÍNDICES
+
