@@ -309,3 +309,76 @@ INDEX autor_index (autor)
 CREATE USER 'DESARROLLADOR' IDENTIDIED BY 'MICONTRASEÑA';
 GRANT ALL PRIVILEGES ON biblioteca.* TO DESARROLLADOR;
 ```
+
+# INSTALACION SISTEMA GESTOR DE BASE DE DATOS
+
+- Lo primero será en google buscar el archivo a descargar para poder instalar el MYSQL
+
+![](https://www.mediafire.com/convkey/4def/vad5je94jenwwfyzg.jpg)
+
+- Cogemos el pack de desarrollador para poder realizar más acciones y le daremos a siguiente para proseguir con la instalación
+
+- Después mirará los requerimientos que nos hacen falta pero como no nos hacen falta las herramientas gráficas le daremos a siguiente
+
+![](http://www.mediafire.com/convkey/8c36/t2b11rnxlw3106qzg.jpg)
+
+- Después comenzará a instalar lo necesario para que funcione
+
+![](http://www.mediafire.com/convkey/30b1/1od632ychct7ixkzg.jpg)
+
+- Una vez se descarguen todos estos paquetes ,después se instalarán
+
+![](http://www.mediafire.com/convkey/aaba/quztcqzsast6r1pzg.jpg)
+
+- Luego nos preguntará que queremos y seleccionaremos MYSQL
+
+![](http://www.mediafire.com/convkey/4f26/dwpbqqouox0fjcozg.jpg)
+
+- También nos pedirá que le digamos el tipo y el tcp
+
+![](http://www.mediafire.com/convkey/5767/oyrmozdyuhgk2j3zg.jpg)
+
+- Para acceder tendremos que crear un usuario root y nos mandará introducir una contraseña para ese usuario
+
+![](http://www.mediafire.com/convkey/f37a/qfu6zc0wzqkjaz2zg.jpg)
+
+- También tendremos que configurar el servicio para windows y dejaremos estas opciones por defecto
+
+![](http://www.mediafire.com/convkey/a3a5/809wia9dya7pafnzg.jpg)
+
+- Luego empieza la configuración de todo que es automática
+
+![](http://www.mediafire.com/convkey/53a7/ozeaucd69brqrvmzg.jpg)
+
+- Una vez terminada la configuración ,nos saltará la configuración del router para MYSQL y yo en mi caso deje todo por defecto
+
+![](http://www.mediafire.com/convkey/850b/m4c0gsgbygsmspmzg.jpg)
+
+- Ahora tendremos que conectar nuestro servidor local de MYSQL
+
+![](http://www.mediafire.com/convkey/7575/x1cy26lscl79f4nzg.jpg)
+
+- Una vez conectado el servidor nos saltará una ventana parecida a la siguiente
+
+![](http://www.mediafire.com/convkey/0fb9/vwp38fs74viyx33zg.jpg)
+
+- Cuando se conecta con el servidor aplicará una configuración para que funcione
+
+![](http://www.mediafire.com/convkey/0fb9/vwp38fs74viyx33zg.jpg)
+
+- Una vez terminada la instalación nos saldrá la siguiente ventana y le daremos a finalizar
+
+![](http://www.mediafire.com/convkey/4520/3v7t4xjgn222ilhzg.jpg)
+
+- Una vez instalado todo podremos usar la línea de comandos para configurar nuestro servidor en MYSQL y por ejemplo con el comando 'status' nos enseñara el estado de todo el servidor
+
+![](http://www.mediafire.com/convkey/1608/m99mmmd4twblhymzg.jpg)
+
+- También podemos mirar los comandos que se pueden usar como guía utilizando el comando 'help' y veremos todas las opciones que tenemos
+
+![](http://www.mediafire.com/convkey/6581/ul4hx8l3gryujruzg.jpg)
+
+- Ahora creare una base de datos  y empezaré a usarla creando tablas y sus valores para poder realizar consultas
+
+![](http://www.mediafire.com/convkey/aedf/mr7n9z7ur92xz7kzg.jpg)
+
