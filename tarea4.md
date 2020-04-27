@@ -1,1 +1,15 @@
+# METADATA DE MYSQL
 
+-El primer comando que deberemos saber es el de 'show databases'; que nos muestra todas las bases de datos que tenemos creadas 
+
+- SHOW COLUMNS
+
+Sirve para consultar la estructura básica de una base de datos pero es bastante limitado ,ya que no se puede elegir que queremos ver y nos muestra todo
+
+Como ejemplo para ver como funciona podemos usar uno de los ejercicios realizados anteriormente y visualizar como actua:
+
+![](http://www.mediafire.com/convkey/653e/ry1tfe59ebf6xf5zg.jpg)
+
+- En la imagén que he puesto se puede ver el uso del comando
+
+'show column from 'nombre_base_de_datos o de tabla';
