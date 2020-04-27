@@ -4,7 +4,7 @@
 Lo primero al crear esta base de datos es tener en cuenta que hay 4 entidades:Proyectos, departamentos,profesores y grupo de investigación
 Para crear la base de datos utilizamos el comando 'CREATE DATABASE' Y posteriormente 'USE + nombre de la base de datos' y pondremos el comando 'status' para comprobar que la base de datos está conectada
 
-![](http://www.mediafire.com/convkey/9c0e/gspwaehrxmlikbyzg.jpg)
+<![](http://www.mediafire.com/convkey/9c0e/gspwaehrxmlikbyzg.jpg)>
 
 ## Crear tablas:
 
