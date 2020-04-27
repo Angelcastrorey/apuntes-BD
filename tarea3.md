@@ -1,0 +1,56 @@
+# Crear bases de datos de Proyectos de investigación y Naves espaciales
+## Proyectos de Investigación
+
+Lo primero al crear esta base de datos es tener en cuenta que hay 4 entidades:Proyectos, departamentos,profesores y grupo de investigación
+Para crear la base de datos utilizamos el comando 'CREATE DATABASE' Y posteriormente 'USE + nombre de la base de datos' y pondremos el comando 'status' para comprobar que la base de datos está conectada
+
+<![](http://www.mediafire.com/convkey/9c0e/gspwaehrxmlikbyzg.jpg)>
+
+## Crear tablas:
+
+Debido a que elimine por error las capturas en las que creaba las tablas pues pondre uno de los comandos y enseñare como queda después la tabla creada
+
+Comando: CREATE TABLE grupoinvesti (nomGrupo VARCHAR(5) PRIMARY KEY ,areaConocimiento VARCHAR(15), lider VARCHAR(20));
+
+![](http://www.mediafire.com/convkey/fb64/iiaqjpyt8swynb3zg.jpg)
+
+# Ahora mostraré como quedan las columnas de cada tabla con el comando 'show columns from "nombre tabla";'
+
+![](http://www.mediafire.com/convkey/0a47/sbxdx2gmbfgkq0xzg.jpg)
+
+Como perdi las anteriores capturas, las tablas ya han sido alteradas y para alterarlas(hacer que no sean nulas) utilice los siguientes comandos;
+
+'ALTER TABLE departamento MODIFY COLUMN telefonoDep INTEGER NOT NULL;
+
+'ALTER TABLE profesor MODIFY COLUMN nomProfesor VARCHAR (20) NOT NULL'
+
+'ALTER TABLE proyectos MODIFY COLUMN nomProyecto VARCHAR (15) NOT NULL'
+
+'ALTER TABLE departamento ADD CONSTRAINT referenciadirector FOREIGN KEY (director) references profesor (dni);'
+
+'ALTER TABLE grupoinvesti ADD CONSTRAINT referencialider foreign key (lider) references profesor (dni);'
+
+'ALTER TABLE profesor MODIFY COLUMN proyectos CHAR (4);'
+
+'ALTER TABLE profesor ADD CONSTRAINT proyectoinvolucrado FOREIGN KEY (proyectos) references proyectos (codProyecto)'
+
+'ALTER TABLE departamento MODIFY COLUMN director VARCHAR (20) NOT NULL;'
+
+'ALTER TABLE profesor MODIFY COLUMN proyectos CHAR (4) NOT NULL;'
+
+Y AL AÑADIR ESTO,JUNTO CON VALORES POR DEFECTO PARA ALGUNAS CLAVES, LAS TABLAS QUEDARÁN COMO LAS MOSTRÉ EN LA CAPTURA
+
+
+## CREAR BASE DE DATOS NAVES ESPACIALES
+
+Procederemos a crearla igual que creamos la anterior pero en vez de con 4 entidades , está contará con 6:camara,dependencia,planetas,razas,servicio,tripulación
+
+- Lo primero que haremos será introducir el comando para crear la base de datos 'create database' y luego con el comando 'use' la escogeremos
+
+![](http://www.mediafire.com/convkey/0e19/bi4wbk3iqh3yeu6zg.jpg)
+
+Pondré un ejemplo de como cree las tablas:'CREATE TABLE razas(nombreraza VARCHAR(10),poblacion INTEGER,dimensiones DECIMAL,planetaprocedencia CHAR(10));'
+
+- En está base de datos usaremos on delete y on update para poner restricciones y una vez añadidos ,las tablas quedarán así
+
+![](http://www.mediafire.com/convkey/653e/ry1tfe59ebf6xf5zg.jpg)
