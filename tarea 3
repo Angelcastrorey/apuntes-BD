@@ -47,4 +47,10 @@ Procederemos a crearla igual que creamos la anterior pero en vez de con 4 entida
 
 - Lo primero que haremos será introducir el comando para crear la base de datos 'create database' y luego con el comando 'use' la escogeremos
 
-![]()
+![](http://www.mediafire.com/convkey/0e19/bi4wbk3iqh3yeu6zg.jpg)
+
+Pondré un ejemplo de como cree las tablas:'CREATE TABLE razas(nombreraza VARCHAR(10),poblacion INTEGER,dimensiones DECIMAL,planetaprocedencia CHAR(10));'
+
+- En está base de datos usaremos on delete y on update para poner restricciones y una vez añadidos ,las tablas quedarán así
+
+![](http://www.mediafire.com/convkey/653e/ry1tfe59ebf6xf5zg.jpg)
